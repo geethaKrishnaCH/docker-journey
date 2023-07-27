@@ -1,0 +1,4 @@
+# This file is made to ignore file/folder of being copied into container
+node_modules
+Dockerfile
+.git
