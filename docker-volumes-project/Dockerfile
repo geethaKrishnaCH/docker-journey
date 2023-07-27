@@ -10,6 +10,7 @@ COPY . .
 
 EXPOSE 3000
 
+# will create an anonymous volume 
 VOLUME [ "/app/feedback" ]
 
 CMD [ "npm", "start" ]
