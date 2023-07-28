@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 async function connectToDB() {
   try {
-    await mongoose.connect("mongodb://localhost:27017/test");
+    await mongoose.connect("mongodb://mongodb:27017/test");
     console.log("Connected to database");
     app.listen(3000, () => console.log("Node server started on port: 3000"));
   } catch (err) {
