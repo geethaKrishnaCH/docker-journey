@@ -8,9 +8,12 @@ RUN npm i
 
 COPY . .
 
-EXPOSE 3000
+ENV PORT_APP=3000
+
+EXPOSE $PORT_APP
 
 # will create an anonymous volume 
-VOLUME [ "/app/feedback" ]
+# it will be useful when using bind mounts to not override node_modules from host machine
+VOLUME [ "/app/node_modules" ]
 
 CMD [ "npm", "start" ]
